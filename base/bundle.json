@@ -20,7 +20,7 @@
 			"type": "bundle",
 			"url": "../atoms/button/bundle.json"
 		},
-		"typography.scss": {
+		"typography.json": {
 			"type": "bundle",
 			"url": "../atoms/typography/bundle.json"
 		}
