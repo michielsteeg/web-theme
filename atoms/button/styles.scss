@@ -37,17 +37,6 @@ button, .button {
 			@include button-ghost($secondary-color);
 		}
 	}
-	&.tertiary {
-		color: $tertiary-contrast;
-		@include button-background($tertiary-color);
-		@include button-base;
-		&.outline {
-			@include button-outline($tertiary-color);
-		}
-		&.ghost {
-			@include button-ghost($tertiary-color);
-		}
-	}
 	&.success {
 		color: $success-contrast;
 		@include button-background($success-color);
