@@ -1,0 +1,31 @@
+{
+	"name": "web-theme-base", 
+	"resources": {
+		"overrides.scss": {
+			"url": "variables.scss"
+		},
+		"variables": {
+			"type": "bundle",
+			"url": "variables/bundle.json"
+		},
+		"include-media": {
+			"type": "bundle",
+			"url": "../utils/include-media/bundle.json"
+		},
+		"mixins.scss": {
+			"type": "bundle",
+			"url": "../utils/mixins/bundle.json"
+		},
+		"theme.scss": {
+			"url": "theme.scss"
+		},
+		"button": {
+			"type": "bundle",
+			"url": "atoms/button/bundle.json"
+		},
+		"typography.scss": {
+			"type": "bundle",
+			"url": "atoms/typography/bundle.json"
+		}
+	}
+}

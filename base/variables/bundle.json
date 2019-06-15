@@ -1,0 +1,11 @@
+{
+	"name": "variables",
+	"resources": {
+		"colors.scss": {
+			"url": "colors.scss"
+		},
+		"settings.scss": {
+			"url": "settings.scss"
+		}
+	}
+}

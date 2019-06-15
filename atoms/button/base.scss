@@ -1,0 +1,109 @@
+// --------------------------------------------------------- VARIABLES
+
+$button-color: $alpha-color !default;
+$button-background: $alpha-contrast !default;
+$button-font-size: 1.2rem !default;
+$button-font-weight: 400 !default;
+$button-height: 2.5rem !default;
+$button-height-large: 3.33333333rem !default;
+
+$button-border-radius: 5px !default;
+$button-border-style: solid !default;
+$button-border-width: 2px !default;
+
+$button-margin: 0 1rem 1rem 0 !default;
+$button-padding: 0 2rem !default;
+$button-text-transform: uppercase !default;
+$button-transition: all 0.3s ease !default;
+$button-min-width: 8rem !default;
+
+$button-border-radius-round: calc(#{$button-height} / 2) !default;
+$button-icon-padding: 0 1rem !default;
+
+
+
+// --------------------------------------------------------- MIXINS
+
+@mixin button-colorize($property, $color) {
+	#{$property}: $color;
+	&:hover {
+		#{$property}: lighten($color, 10);
+	}
+	&:active, &.active {
+		#{$property}: lighten($color, 20);
+	} 
+	&:disabled, &.disabled {
+		#{$property}: lighten($color, 40);
+	}
+}
+
+@mixin button-background($color) {
+	@include button-colorize("background-color", $color);
+}
+@mixin button-border($color) {
+	@include button-colorize("border-color", $color);
+}
+@mixin button-color($color) {
+	@include button-colorize("color", $color);
+}
+@mixin button-outline($color) {
+	background-color: transparent;
+	border-width: $button-border-width;
+	border-style: $button-border-style;
+	@include button-border($color);
+	@include button-color($color);
+}
+@mixin button-ghost($color) {
+	background-color: transparent;
+	border: none;
+	@include button-color($color);
+}
+
+@mixin button-large {
+	height: $button-height-large;
+	line-height: $button-height-large;
+}
+
+@mixin button-base {
+	border-radius: $button-border-radius;
+	color: $button-color;
+	cursor: pointer;
+	display: inline-block;
+	font-family: $font-family;
+	font-size: $button-font-size;
+	font-weight: $button-font-weight;
+	height: $button-height;
+	line-height: $button-height;
+	margin: $button-margin;
+	padding: $button-padding;
+	text-align: center;
+	text-transform: $button-text-transform;
+	transition: $button-transition;
+	outline: none;
+	min-width: $button-min-width;
+	&.large {
+		@include button-large;
+	}
+	&.round {
+		border-radius: $button-border-radius-round;
+	}
+	&.square {
+		border-radius: 0;
+	}
+	&.full {
+		width: 100%;
+	}
+	.fa {
+		line-height: $button-height;
+		margin-right: 0;
+		position: relative;
+		left: -0.8rem;
+		top: 0.2rem;
+	}
+	&.is-icon {
+		padding: $button-icon-padding;
+		.fa {
+			margin: 0;
+		}
+	}
+}

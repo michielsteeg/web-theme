@@ -1,0 +1,43 @@
+$font-line-height: 1.22222222 !default;
+
+$font-weight-emphasis: bold !default;
+$font-style-cursive: italic !default;
+
+$font-description-color: lighten($font-color, 20) !default;
+$font-description-style: italic !default;
+
+
+%font-small {
+	font-size: $font-size-small;
+}
+
+%font-large {
+	font-size: $font-size-large;
+}
+
+p {
+	font-size: $font-size-regular;
+	line-height: $font-line-height;
+	&.large {
+		@extend %font-large;
+	}
+	&.small, &.description {
+		@extend %font-small;
+	}
+	&.description {
+		color: $font-description-color;
+		font-style: $font-description-style;
+	}
+}
+
+.text-center {
+	text-align: center;
+}
+
+.emphasis {
+	font-weight: $font-weight-emphasis;
+}
+
+.cursive {
+	font-style: $font-style-cursive;
+}

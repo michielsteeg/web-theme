@@ -1,0 +1,8 @@
+{
+	"name": "mixins",
+	"resources": {
+		"mixins.scss": {
+			"url": "mixins.scss"
+		}
+	}
+}

@@ -1,0 +1,11 @@
+{
+	"name": "atom-button",
+	"resources": {
+		"base.scss": {
+			"url": "base.scss"
+		},
+		"styles.scss": {
+			"url": "styles.scss"
+		}
+	}
+}

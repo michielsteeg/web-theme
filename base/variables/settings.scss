@@ -1,0 +1,30 @@
+
+
+// ---------------------------------------------- border
+$border: $beta-border solid 1px !default;
+
+
+// ---------------------------------------------- container
+$container-max-width: 60rem !default;
+$container-padding: 0 2rem !default;
+$container-padding-small: 0 1rem !default;
+
+
+
+// ---------------------------------------------- font settings
+$base-font-size: 16px !default;
+$font-family: sans-serif !default;
+$font-family-alt: serif !default;
+$font-color: $body-contrast !default;
+$font-weight: normal !default;
+
+
+// ---------------------------------------------- form
+$n-form-line-height: 3rem !default;
+
+
+// ---------------------------------------------- icons
+$icon-family: "Font Awesome 5 Free" !default;
+// $icon-size: 14px; // TBC
+$icon-font-size: 14px !default;
+$icon-size: 1.2rem !default;

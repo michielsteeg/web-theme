@@ -1,0 +1,11 @@
+{
+	"name": "atom-typography",
+	"resources": {
+		"font-scale.scss": {
+			"url": "perfect-fourth.scss"
+		},
+		"utils.scss": {
+			"url": "utils.scss"
+		}
+	}
+}

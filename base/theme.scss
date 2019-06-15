@@ -1,0 +1,60 @@
+$body-font-size: $base-font-size !default;
+$body-line-height: 1.25 !default;
+
+$anchor-color: $primary-color !default;
+$anchor-weight: 600 !default;
+$anchor-decoration: underline !default;
+
+html:root {
+	font-size: $base-font-size;
+	font-family: $font-family;
+}
+
+body {
+	background-color: $body-color;
+	font-size: $body-font-size;
+	line-height: $body-line-height;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+
+.container {
+	justify-content: center;
+	padding: $container-padding-small;
+	@include media(">tablet") {
+		margin-left: auto;
+		margin-right: auto;
+		padding: $container-padding;
+		max-width: $container-max-width;
+	}
+}
+
+.icon, .fa {
+	font-family: $icon-family;
+	height: $icon-size;
+	text-align: center;
+	width: $icon-size;
+	&:before {
+		font-size: $icon-font-size;
+		line-height: $icon-size;
+	}
+}
+
+a, %anchor {
+	color: $anchor-color;
+	font-weight: $anchor-weight;
+	text-decoration: $anchor-decoration;
+	&.plain {
+		color: inherit;
+		font-weight: normal;
+		text-decoration: none;
+		&:hover {
+			text-decoration: $anchor-decoration;
+		}
+	}
+}
