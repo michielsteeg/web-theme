@@ -1,9 +1,6 @@
 {
 	"name": "web-theme-base", 
 	"resources": {
-		"overrides.scss": {
-			"url": "variables.scss"
-		},
 		"variables": {
 			"type": "bundle",
 			"url": "variables/bundle.json"
