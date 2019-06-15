@@ -21,11 +21,11 @@
 		},
 		"button": {
 			"type": "bundle",
-			"url": "atoms/button/bundle.json"
+			"url": "../atoms/button/bundle.json"
 		},
 		"typography.scss": {
 			"type": "bundle",
-			"url": "atoms/typography/bundle.json"
+			"url": "../atoms/typography/bundle.json"
 		}
 	}
 }
