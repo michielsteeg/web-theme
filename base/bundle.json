@@ -9,7 +9,7 @@
 			"type": "bundle",
 			"url": "../utils/include-media/bundle.json"
 		},
-		"mixins.scss": {
+		"mixins.json": {
 			"type": "bundle",
 			"url": "../utils/mixins/bundle.json"
 		},

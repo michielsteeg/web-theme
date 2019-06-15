@@ -1,10 +1,10 @@
 {
 	"name": "include-media",
 	"resources": {
-		"devices.sass": {
+		"devices.scss": {
 			"url": "https://raw.githubusercontent.com/nablex/themes/master/dashboard/devices.sass"
 		},
-		"include-media.sass": {
+		"include-media.scss": {
 			"url": "https://raw.githubusercontent.com/eduardoboucas/include-media/master/dist/_include-media.scss"
 		}
 	}
