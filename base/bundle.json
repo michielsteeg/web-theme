@@ -1,11 +1,11 @@
 {
 	"name": "web-theme-base", 
 	"resources": {
-		"variables": {
+		"variables.json": {
 			"type": "bundle",
 			"url": "variables/bundle.json"
 		},
-		"include-media": {
+		"include-media.json": {
 			"type": "bundle",
 			"url": "../utils/include-media/bundle.json"
 		},
@@ -16,7 +16,7 @@
 		"theme.scss": {
 			"url": "theme.scss"
 		},
-		"button": {
+		"button.json": {
 			"type": "bundle",
 			"url": "../atoms/button/bundle.json"
 		},
