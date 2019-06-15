@@ -1,0 +1,8 @@
+{
+	"name": "atom-shadow",
+	"resources": {
+		"shadow.scss": {
+			"url": "shadow.scss"
+		}
+	}
+}

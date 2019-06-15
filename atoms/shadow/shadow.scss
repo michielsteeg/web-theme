@@ -1,0 +1,39 @@
+
+$box-shadow-transition: box-shadow 0.3s cubic-bezier(.25,.8,.25,1) !default;
+$box-shadow-zero: 0 1px 3px rgba(0,0,0,0.03), 0 1px 2px rgba(0,0,0,0.06) !default;
+$box-shadow-one: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24) !default;
+$box-shadow-two: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23) !default;
+$box-shadow-three: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23) !default;
+$box-shadow-four: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22) !default;
+$box-shadow-five: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22) !default;
+
+$box-shadow-negative-zero: 0 -1px 3px rgba(0,0,0,0.03), 0 -1px 2px rgba(0,0,0,0.06) !default;
+$box-shadow-negative-one: 0 -1px 3px rgba(0,0,0,0.12), 0 -1px 2px rgba(0,0,0,0.24) !default;
+
+%box-shadow-transition {
+    transition: $box-shadow-transition;
+}
+%box-shadow-zero {
+    box-shadow: $box-shadow-zero;
+}
+%box-shadow-one {
+    box-shadow: $box-shadow-one;
+}
+%box-shadow-two {
+    box-shadow: $box-shadow-two;
+}
+%box-shadow-three {
+    box-shadow: $box-shadow-three;
+}
+%box-shadow-four {
+    box-shadow: $box-shadow-four;
+}
+%box-shadow-five {
+    box-shadow: $box-shadow-five;
+}
+%box-shadow-negative-zero {
+    box-shadow: $box-shadow-negative-zero;
+}
+%box-shadow-negative-one {
+    box-shadow: $box-shadow-negative-one;
+}
