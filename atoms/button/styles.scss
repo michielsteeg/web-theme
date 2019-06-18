@@ -84,6 +84,7 @@ button, .button {
 }
 
 button, .button {
+	@include button-base;
 	// an icon is assumed on the left
 	.icon, .fa {
 		margin-right: 0.5rem;
