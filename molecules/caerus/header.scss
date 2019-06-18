@@ -1,0 +1,110 @@
+
+// dimensions
+$caerus-header-height: 4rem !default;
+$caerus-header-inner-width: $container-max-width !default;
+
+// main colors
+$caerus-header-background: #EEF3FF !default;
+$caerus-header-color: #2D68FF !default;
+
+// logo
+$caerus-header-logo-url: "/resources/images/logo.png" !default;
+
+// actions
+$caerus-header-action-color: $caerus-header-color !default;
+$caerus-header-action-font-size: 0.9rem !default;
+$caerus-header-action-font-weight: 700 !default;
+$caerus-header-action-padding: 1rem !default;
+$caerus-header-action-decoration: none !default;
+$caerus-header-action-transition: all 0.15s linear !default;
+
+$caerus-header-action-hover-background: darken($caerus-header-background, 20) !default;
+$caerus-header-action-hover-opacity: 1 !default;
+
+
+
+.caerus-header {
+	.caerus-header-container {
+		background-color: $caerus-header-background;
+		color: $caerus-header-color;
+		display: flex;
+		height: $caerus-header-height;
+		line-height: $caerus-header-height;
+		list-style: none;
+		margin: 0;
+		padding: 0 calc((100% - #{$caerus-header-inner-width}) / 2);
+		width: 100%;
+		z-index: 100;
+		.page-action {
+			white-space: nowrap;
+			display: inline-block;
+			.page-action-entry {
+				color: $caerus-header-action-color;
+				font-size: $caerus-header-action-font-size;
+				font-weight: $caerus-header-action-font-weight;
+				padding: $caerus-header-action-padding;
+				text-decoration: $caerus-header-action-decoration;
+				transition: $caerus-header-action-transition;
+			}
+		}
+		.page-action:not(.logo):hover {
+			background-color: $caerus-header-action-hover-background;
+		}
+		.logo {
+			background-image: url($caerus-header-logo-url); 
+			background-origin: content-box;
+			background-size: contain;
+			background-position: left;
+			background-repeat: no-repeat;
+			display: inline-block;
+			height: $caerus-header-height;
+			padding: $caerus-header-height / 4;
+			width: 100%;
+			.page-action-entry {
+				display: none;
+			}
+		}
+		.right {
+			margin-left: auto;
+		}
+		
+	}
+	@include media("<=phone") {
+		.caerus-header-container {
+			display: block;
+			margin: 0;
+			z-index: 100;
+			.page-action {
+				display: block;
+			}
+			.page-action:not(:first-child) {
+				display: none;
+			}
+			&:hover {
+				.page-action:not(:first-child) {
+					background-color: $primary-color;
+					display: block;
+					margin: 0;
+					transition: all 0.2s linear;
+					width: 100%;
+					&:hover {
+						background-color: darken($primary-color, 3);
+					}
+					.page-action-entry {
+						display: block;
+						height: 100%;
+						padding: 0 1rem;
+						opacity: 1;
+						width: 100%;
+					}
+				}
+				.page-action:first-child {
+					margin-bottom: 0;
+				}
+				.page-action:last-child {
+					box-shadow: $box-shadow-two;
+				}
+			}
+		}
+	}
+}
