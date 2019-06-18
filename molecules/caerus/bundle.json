@@ -1,0 +1,8 @@
+{
+	"name": "molecule-caerus",
+	"resources": {
+		"header.scss": {
+			"url": "header.scss"
+		}
+	}
+}
