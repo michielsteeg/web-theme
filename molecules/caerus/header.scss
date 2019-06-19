@@ -9,6 +9,7 @@ $caerus-header-color: #2D68FF !default;
 
 // logo
 $caerus-header-logo-url: "/resources/images/logo.png" !default;
+$caerus-header-logo-padding: 0.25rem !default;
 
 // actions
 $caerus-header-action-color: $caerus-header-color !default;
@@ -58,7 +59,7 @@ $caerus-header-action-hover-opacity: 1 !default;
 			background-repeat: no-repeat;
 			display: inline-block;
 			height: $caerus-header-height;
-			padding: $caerus-header-height / 4;
+			padding: $caerus-header-logo-padding;
 			width: 100%;
 			.page-action-entry {
 				display: none;
