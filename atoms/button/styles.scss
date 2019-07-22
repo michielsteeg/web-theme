@@ -1,6 +1,6 @@
 // --------------------------------------------------------- BUTTON STYLES
 
-button, .button {
+button, .button, %button {
 	&.reverse {
 		color: $button-background;
 		@include button-background($button-color);
@@ -83,7 +83,7 @@ button, .button {
 	}
 }
 
-button, .button {
+.button, %button {
 	@include button-base;
 	// an icon is assumed on the left
 	.icon, .fa {
@@ -101,7 +101,7 @@ button, .button {
 	}
 }
 
-a.button {
+a.button, %a-button {
 	@include button-ghost($button-background);
 	@include button-base;
 	line-height: $button-height;
