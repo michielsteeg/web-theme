@@ -1,0 +1,8 @@
+{
+	"name": "molecule-layout",
+	"resources": {
+		"site-row.scss": {
+			"url": "site-row.scss"
+		}
+	}
+}
