@@ -137,7 +137,7 @@ $layout-site-row_breakpoint_row-cell_hero-image__right_margin: 2rem 0 -2rem !def
 
 // breakpoint
 @include media($layout-site-row_breakpoint) {
-	.site-row {
+	.site-row, .site-row.site-row-three {
 		flex-flow: column nowrap;
 		padding: $layout-site-row_breakpoint_padding;
 		.row-cell {
