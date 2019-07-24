@@ -1,6 +1,9 @@
 {
 	"name": "molecule-layout",
 	"resources": {
+		"prompt.scss": {
+			"url": "prompt.scss"
+		},
 		"site-row.scss": {
 			"url": "site-row.scss"
 		}
