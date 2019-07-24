@@ -1,0 +1,190 @@
+// TODO : variabelen extraheren voor 'SPECIFIC COMPONENTS'
+
+/// label
+$lucina-form_label_color: $body-contrast !default;
+$lucina-form_label_line-height: 1.33333333rem !default;
+$lucina-form_label_padding: 0.4rem 0 !default;
+
+/// field 
+$lucina-form_field_background: $body-color !default;
+$lucina-form_field_border: 1px solid !default;
+$lucina-form_field_border_color: lighten($primary-color, 20) !default;
+$lucina-form_field_font-size: 1rem !default;
+$lucina-form_field_padding: 0.5rem !default;
+//// placeholder 
+$lucina-form_field_placeholder_color: $primary-color !default;
+$lucina-form_field_placeholder_font-family: $font-family !default;
+$lucina-form_field_placeholder_font-size: 1.2rem !default;
+$lucina-form_field_placeholder_font-style: italic !default;
+$lucina-form_field_placeholder_font-weight: normal !default;
+//// invalid 
+$lucina-form_field_invalid_border: 1px solid $danger-color !default;
+
+/// message 
+$lucina-form_message_color: $danger-color !default;
+$lucina-form_message_font-style: italic !default;
+$lucina-form_message_line-height: 1.5 !default;
+
+
+.n-form.lucina, %lucina-form {
+	.n-form-content {
+		display: flex;
+		flex-direction: column;
+		.n-form-component {
+			margin: 0.5rem 0;
+			width: 100%;
+			label {
+				color: $lucina-form_label_color;
+				display: block;
+				line-height: $lucina-form_label_line-height;
+				padding: $lucina-form_label_padding;
+			}
+			.field {
+				background-color: $lucina-form_field_background;
+				border: $lucina-form_field_border;
+				border-color: $lucina-form_field_border_color;
+				font-family: $font-family;
+				font-size: $lucina-form_field_font-size;
+				padding: $lucina-form_field_padding;
+				width: 100%;
+				@include placeholder {
+					color: $lucina-form_field_placeholder_color;
+					font-family: $lucina-form_field_placeholder_font-family;
+					font-size: $lucina-form_field_placeholder_font-size;
+					font-style: $lucina-form_field_placeholder_font-style;
+					font-weight: $lucina-form_field_placeholder_font-weight;
+				}
+				&.n-form-invalid {
+					border: $lucina-form_field_invalid_border;
+				}
+			}
+			.n-input-result {
+				display: none;
+			}
+			.n-messages {
+				.n-message {
+					@extend %font-small;
+					color: $lucina-form_message_color;
+					font-style: $lucina-form_message_font-style;
+					line-height: $lucina-form_message_line-height;
+				}
+			}
+		}
+		// SPECIFIC COMPONENTS
+		.n-form-component {
+			&.n-form-radio label {
+				padding: 0;
+				padding-left: 0.5rem;
+			}
+			&.n-form-checkbox {
+				label {
+					padding: 0;
+					padding-left: 1rem;
+					&:before, &:after {
+						border-radius: 2.5px;
+					}
+					&:before {
+						background-color: transparent;
+						border: 1px solid alighten($primary-color, 1);
+						height: calc(#{rem(20)} - 2px);
+						width: calc(#{rem(20)} - 2px);
+					}
+				}
+				input[type="checkbox"][checked] + label:after {
+					background-color: alighten($primary-color, 3);
+					border: 4px solid alighten($primary-color, 1);
+					content: "";
+					font-family: unset;
+					box-shadow: none;
+					height: calc(#{rem(20)} - 8px);
+					width: calc(#{rem(20)} - 8px);
+				}
+			}
+			&.n-form-text [type=date],
+			&.n-form-text.n-form-date-input input, &.n-form-text.n-form-date-input textarea {
+				width: 100%;
+			}
+			&.n-form-combo .n-input-combo {
+				.n-input-combo-input-container {
+					flex: none;
+					width: 100%;
+				}
+			}
+			&.n-form-text-password + .forgot-password-link {
+				font-weight: normal;
+			}
+		}
+		.n-form-date {
+			.n-form-component {
+				position: relative;
+			}
+			.n-input-date {
+				.n-input-date-legend {
+					display: none;
+				}
+			}
+			@include media("<=phone") {
+				.n-input-date {
+					font-size: 1rem;
+					left: -1.5rem;
+					th {
+						padding: 0.4rem 0.5rem;
+					}
+					td {
+						padding: 0.4rem;
+					}
+				}
+			}
+		}
+		.n-form-barcode {
+			> label {
+				display: none;
+			}
+			.n-form-barcode-container {
+				.n-form-canvas-container {
+					canvas {
+						height: 100%;
+						width: 100%;
+					}
+					.overlay {
+						border: 1px dashed $primary-color;
+						.n-form-barcode-retry {
+							@include button-background($primary-color);
+							@include button-base;
+							margin: 0;
+						}
+					}
+				}
+			}
+			.manual-entry {
+				margin-top: 3rem;
+			}
+		}
+		input[disabled] {
+			background-color: alighten($primary-color, 5);
+			border-color: alighten($primary-color, 3);
+		}
+	}
+	> footer {
+		display: flex;
+		flex-flow: column nowrap;
+		.footer-standard {
+			align-items: center;
+			display: flex;
+			justify-content: space-evenly;
+			margin-top: 2rem;
+			order: 2;
+		}
+		.footer-messages {
+			@extend %font-small;
+			color: $danger-color;
+			order: 1;
+		}
+	}
+}
+
+.nabu-cms {
+	.n-form {
+		@extend %lucina-form;
+	}
+}

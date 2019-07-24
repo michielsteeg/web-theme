@@ -1,0 +1,8 @@
+{
+	"name": "molecule-lucina",
+	"resources": {
+		"form.scss": {
+			"url": "form.scss"
+		}
+	}
+}
