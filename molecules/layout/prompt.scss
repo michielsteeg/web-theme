@@ -13,8 +13,8 @@ $layout-prompt_content_padding: 2rem !default;
 $layout-prompt_content_max-width: 40rem !default;
 
 /// breakpoint
-$layout-prompt_content_padding_desktop: $layout-prompt_padding !default;
-$layout-prompt_content_padding_tablet: $layout-prompt_padding !default;
+$layout-prompt_content_padding_desktop: $layout-prompt_content_padding !default;
+$layout-prompt_content_padding_tablet: $layout-prompt_content_padding !default;
 $layout-prompt_content_padding_phone: 1rem !default;
 
 .n-prompt {
