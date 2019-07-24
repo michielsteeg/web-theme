@@ -1,0 +1,57 @@
+
+// prompt
+$layout-prompt_padding: 1rem !default;
+
+// content
+$layout-prompt_content_background: $beta-color !default;
+$layout-prompt_content_border-radius: 0.5rem !default;
+$layout-prompt_content_max-height: 100% !default;
+$layout-prompt_content_margin: 1rem !default;
+$layout-prompt_content_overflow-x: auto !default;
+$layout-prompt_content_overflow-y: inherit !default;
+$layout-prompt_content_padding: 2rem !default;
+$layout-prompt_content_max-width: 40rem !default;
+
+/// breakpoint
+$layout-prompt_content_padding_desktop: $layout-prompt_padding !default;
+$layout-prompt_content_padding_tablet: $layout-prompt_padding !default;
+$layout-prompt_content_padding_phone: 1rem !default;
+
+.n-prompt {
+	padding: $layout-prompt_padding;
+	.n-prompt-content {
+		background: $layout-prompt_content_background;
+		border-radius: $layout-prompt_content_border-radius;
+		max-height: $layout-prompt_content_max-height;
+		margin: $layout-prompt_content_margin;
+		overflow-x: $layout-prompt_content_overflow-x;
+		overflow-y: $layout-prompt_content_overflow-y;
+		padding: $layout-prompt_content_padding;
+		width: 100%;
+		max-width: $layout-prompt_content_max-width;
+	}
+}
+
+@include media(">desktop") {
+	.n-prompt {
+		.n-prompt-content {
+			padding: $layout-prompt_content_padding_phone;
+		}
+	}
+}
+
+@include media("<=tablet") {
+	.n-prompt {
+		.n-prompt-content {
+			padding: $layout-prompt_content_padding_phone;
+		}
+	}
+}
+
+@include media("<=phone") {
+	.n-prompt {
+		.n-prompt-content {
+			padding: $layout-prompt_content_padding_phone;
+		}
+	}
+}
