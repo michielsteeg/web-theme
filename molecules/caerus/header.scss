@@ -8,8 +8,8 @@ $caerus-header-background: #EEF3FF !default;
 $caerus-header-color: #2D68FF !default;
 
 // logo
-$caerus-header-logo-url: "/resources/images/logo.png" !default;
-$caerus-header-logo-padding: 0.25rem !default;
+$caerus-header_logo_url: "/resources/images/logo.png" !default;
+$caerus-header_logo_padding: $caerus-header-height / 8;
 
 // actions
 $caerus-header-action-color: $caerus-header-color !default;
@@ -52,14 +52,14 @@ $caerus-header-action-hover-opacity: 1 !default;
 			background-color: $caerus-header-action-hover-background;
 		}
 		.logo {
-			background-image: url($caerus-header-logo-url); 
+			background-image: url($caerus-header_logo_url); 
 			background-origin: content-box;
 			background-size: contain;
 			background-position: left;
 			background-repeat: no-repeat;
 			display: inline-block;
 			height: $caerus-header-height;
-			padding: $caerus-header-logo-padding;
+			padding: $caerus-header_logo_padding;
 			width: 100%;
 			.page-action-entry {
 				display: none;
