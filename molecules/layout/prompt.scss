@@ -35,7 +35,7 @@ $layout-prompt_content_padding_phone: 1rem !default;
 @include media(">desktop") {
 	.n-prompt {
 		.n-prompt-content {
-			padding: $layout-prompt_content_padding_phone;
+			padding: $layout-prompt_content_padding_desktop;
 		}
 	}
 }
@@ -43,7 +43,7 @@ $layout-prompt_content_padding_phone: 1rem !default;
 @include media("<=tablet") {
 	.n-prompt {
 		.n-prompt-content {
-			padding: $layout-prompt_content_padding_phone;
+			padding: $layout-prompt_content_padding_tablet;
 		}
 	}
 }
