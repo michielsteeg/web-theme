@@ -20,6 +20,12 @@
 	}
 }
 
+@mixin grayscale($value) {
+    -webkit-filter: #{"grayscale(#{$value})"};
+    -moz-filter: #{"grayscale(#{$value})"};
+    filter:#{"grayscale(#{$value})"};
+}
+
 @mixin ellipsis {
 	overflow: hidden;
 	text-overflow: ellipsis;
