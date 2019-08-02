@@ -2,3 +2,11 @@
 .page-action-button {
     @extend %button;
 }
+
+// ---------------------------------------------- page-fields
+.page-fields.reset {
+    margin: 0;
+    .page-field-fragment {
+        margin: 0;
+    }
+}
